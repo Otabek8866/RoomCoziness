@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Admin</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+ 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 30px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: RoyalBlue;
+}
+.myButton {
+    border: none;
+    padding: 12px 16px;
+    display:block;
+    float:right;
+    color: black;
+    text-align:center;
+    font-size: 20px;
+	cursor: pointer;
+}
+.myButton:hover {
+  background-color: Red;
+</style>
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="../static/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="../static/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="../static/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+<a href="/login-page/" class="myButton">Log Out</a>
+<form method="get" action="/">
+<button class="login100-form-btn">Home</button>
+</form>
+
+
+<div class="container-login100" style="background-image: url('../static/images/2123329.png');">
+
+<h1>
+<b>-5 : Y is strongly preferred over X. <br>
+-3 : Y is slightly preferred over X.<br>
+1  : X (Row) and Y (Column) are 1 equally. <br> 
+3  : X is slightly preferred over Y.<br>
+5  : X is strongly preferred over Y.<br>
+<br><br><br>
+</b>
+</h1>
+
+<form method="post" action="/weight/">
+<br><br>		
+<table style="width: 75.8781%;" border="5" cellpadding="5" class="center">
+<tbody>
+<tr style="height: 21px;">
+<td style="height: 21px; width: 25%;">&nbsp;</td>
+<td style="height: 21px; width: 15%;">Temperature</td>
+<td style="height: 21px; width: 15%;">Humidity</td>
+<td style="height: 21px; width: 14.4244%;">CO<sub>2</sub></td>
+<td style="height: 21px; width: 13.5756%;">Noise</td>
+<td style="height: 21px; width: 38%;">Light</td>
+</tr>
+<tr style="height: 25.2px;">
+<td style="height: 25.2px; width: 25%;">Temperature&nbsp;</td>
+<td style="height: 25.2px; width: 15%;">&nbsp;1</td>
+<td style="height: 25.2px; width: 15%;">
+	<select name="tempoverhumidity">    
+      <option value="1">-5</option>    
+      <option value="3">-3</option>    
+	  <option value="5">1</option> 
+	  <option value="7">3</option> 
+	  <option value="9">5</option> 
+    </select>
+</td>
+<td style="height: 25.2px; width: 14.4244%;">
+<select name="tempoverco2">    
+      <option value="0.2">-5</option>    
+      <option value="0.33">-3</option>    
+	  <option value="1">1</option> 
+	  <option value="3">3</option> 
+	  <option value="5">5</option> 
+</select>
+</td>
+<td style="height: 25.2px; width: 13.5756%;">
+<select name="tempovernoise">    
+      <option value="0.2">-5</option>    
+      <option value="0.33">-3</option>    
+	  <option value="1">1</option> 
+	  <option value="3">3</option> 
+	  <option value="5">5</option> 
+</select>
+</td>
+<td style="height: 25.2px; width: 38%;">
+<select name="tempoverlight">    
+      <option value="0.2">-5</option>    
+      <option value="0.33">-3</option>    
+	  <option value="1">1</option> 
+	  <option value="3">3</option> 
+	  <option value="5">5</option> 
+</select>
+</td>
+</tr>
+<tr style="height: 25px;">
+<td style="height: 25px; width: 25%;">Humidity</td>
+<td style="height: 25px; width: 15%;"></td>
+<td style="height: 25px; width: 15%;">1</td>
+<td style="height: 25px; width: 14.4244%;">
+<select name="humidityoverco2">    
+      <option value="0.2">-5</option>    
+      <option value="0.33">-3</option>    
+	  <option value="1">1</option> 
+	  <option value="3">3</option> 
+	  <option value="5">5</option> 
+</select>
+</td>
+<td style="height: 25px; width: 13.5756%;">
+<select name="humidityovernoise">    
+      <option value="0.2">-5</option>    
+      <option value="0.33">-3</option>    
+	  <option value="1">1</option> 
+	  <option value="3">3</option> 
+	  <option value="5">5</option> 
+</select>
+</td>
+<td style="height: 25px; width: 38%;">
+<select name="humidityoverlight">    
+      <option value="0.2">-5</option>    
+      <option value="0.33">-3</option>    
+	  <option value="1">1</option> 
+	  <option value="3">3</option> 
+	  <option value="5">5</option> 
+</select>
+</td>
+</tr>
+<tr style="height: 23px;">
+<td style="height: 23px; width: 25%;">CO<sub>2</sub></td>
+<td style="height: 23px; width: 15%;"></td>
+<td style="height: 23px; width: 15%;"></td>
+<td style="height: 23px; width: 14.4244%;">1</td>
+<td style="height: 23px; width: 13.5756%;">
+<select name="co2overnoise">    
+      <option value="0.2">-5</option>    
+      <option value="0.33">-3</option>    
+	  <option value="1">1</option> 
+	  <option value="3">3</option> 
+	  <option value="5">5</option> 
+</select>
+</td>
+<td style="height: 23px; width: 38%;">
+<select name="co2overlight">    
+      <option value="0.2">-5</option>    
+      <option value="0.33">-3</option>    
+	  <option value="1">1</option> 
+	  <option value="3">3</option> 
+	  <option value="5">5</option> 
+</select>
+</td>
+</tr>
+<tr style="height: 25px;">
+<td style="height: 25px; width: 25%;">Noise</td>
+<td style="height: 25px; width: 15%;"></td>
+<td style="height: 25px; width: 15%;"></td>
+<td style="height: 25px; width: 14.4244%;"></td>
+<td style="height: 23px; width: 13.5756%;">1</td>
+<td style="height: 23px; width: 38%;">
+<select name="noiseoverlight">    
+      <option value="0.2">-5</option>    
+      <option value="0.33">-3</option>    
+	  <option value="1">1</option> 
+	  <option value="3">3</option> 
+	  <option value="5">5</option> 
+</select>
+</td>
+</tr>
+<tr style="height: 25px;">
+<td style="height: 25px; width: 25%;">Light</td>
+<td style="height: 25px; width: 15%;"></td>
+<td style="height: 25px; width: 15%;"></td>
+<td style="height: 25px; width: 14.4244%;"></td>
+<td style="height: 23px; width: 13.5756%;"></td>
+<td style="height: 23px; width: 38%;">1</td>
+</tr>	
+</tbody>
+</table>
+<br>
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Submit
+						</button>
+						<button class="login100-form-btn" type="reset">
+						Clear
+						</button>
+					</div>
+</form>
+	
+
+
+
+</div>
+
+
+<!--===============================================================================================-->
+	<script src="../static/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/bootstrap/js/popper.js"></script>
+	<script src="../static/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/daterangepicker/moment.min.js"></script>
+	<script src="../static/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/js/main.js"></script>
+
+</body>
+</html>
